@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA TI PILI :3</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('amar.png') no-repeat center center/cover;
+            font-family: 'Arial', sans-serif;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 8vw;
+            animation: fadeInOut 3s infinite;
+            /* Animación suave */
+        }
+
+        h2 {
+            font-size: 4vw;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+            /* Pequeño efecto de pulsación */
+        }
+
+        button {
+            font-size: 3vw;
+            padding: 15px 30px;
+            margin-top: 30px;
+            border: none;
+            margin-left: 200px;
+            background-color: #ff3366;
+            color: white;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeInOut {
+
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1><span
+                style="background: linear-gradient(to right, #ffffff, #ffffff); background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"></span>
+        </h1>
+        <h1>MI NIÑA PILI (●'◡'●)♡✨</h1>
+        <h2>Tengo un regalo para ti✍(◔◡◔)</h2>
+        <div id="buttons">
+            <button onclick="window.location.href='rosas.html'">Ver regalo☞💛</button>
+            <button id="btnNo" onmouseover="mueveElBoton()">No :v</button>
+        </div>
+    </div>
+    <script>
+        function accionParaCuandoEllaDigaQueSi() {
+            const respuesta = confirm("¿Estás segura que quieres ser mi novia?");
+            if (respuesta) {
+                //redirecccionar a la pagina si responde SI
+                window.location.href = "opcionsi.html";
+            } else {
+                alert("Espero que puedas reconsiderarlo");
+            }
+        }
+        function mueveElBoton() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            const newWidth = Math.random() * width;
+            const newHeight = Math.random() * height;
+
+            const btnNo = document.getElementById("btnNo");
+            btnNo.style.position = "absolute";
+            btnNo.style.left = newWidth + "px";
+            btnNo.style.top = newHeight + "px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Para Der</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            /* Fondo negro */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 5s steps(40) infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+            animation: typing 3s steps(40);
+        }
+
+        /* Fondo de puntos */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, white 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Querida Der ❤️,</h1>
+        <p>Quiero que sepas lo afortunado que me siento de haberte conocido. Eres una persona increíble, llena de luz y
+            bondad, y me has hecho sentir parte de algo muy especial desde el primer momento. Gracias por abrirme las
+            puertas de tu corazón y del grupo tan bonito del voluntariado, por tu amistad y tu cariño. </p>
+        <p>Eres una inspiración constante, y quiero que nunca te rindas, sin importar los desafíos que la vida te
+            presente. Tienes una fuerza interior increíble y una capacidad para alegrar a los demás que pocas personas
+            poseen. Sigue adelante con esa sonrisa que ilumina a todos a tu alrededor, porque el mundo necesita más
+            personas como tú. 🌻🌻</p>
+        <p>Te quiero mucho y siempre estaré aquí para ti. ❤️</p>
+    </div>
+</body>
+
+</html>
